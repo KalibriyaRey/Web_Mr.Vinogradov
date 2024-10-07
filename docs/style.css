@@ -211,8 +211,8 @@ span{
     content: "";
     background-color: rgb(255, 255, 255);
     position: absolute;
-    width: calc(100px + 1rem);
-    height: 95%;
+    width: calc(100px + 20rem);
+    height: 100%;
     border-left: 3px solid rgb(0, 0, 0);
     right: -7;
     animation: cursor 0.6s infinite;
@@ -267,4 +267,5 @@ span{
         margin-top: 4rem;
     }
 }
+
 
