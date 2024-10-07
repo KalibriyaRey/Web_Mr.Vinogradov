@@ -211,7 +211,7 @@ span{
     content: "";
     background-color: rgb(255, 255, 255);
     position: absolute;
-    width: calc(50px + 1rem);
+    width: calc(100px + 1rem);
     height: 100%;
     border-left: 3px solid rgb(0, 0, 0);
     right: -1;
@@ -228,17 +228,17 @@ span{
     0%, 20%{
         content: "Web Developer";
     }
-    21%, 40%{
-        content: "AHK Developer";
+    20%, 40%{
+        content: "Python Developer";
     }
-    41%, 60%{
+    40%, 60%{
         content: "Web Designer";
     }
-    61%, 80%{
+    60%, 80%{
         content: "Youtuber";
     }
-    81%, 100%{
-        content: "Python Developer";
+    80%, 100%{
+        content: "AHK Developer";
     }
 }
 
