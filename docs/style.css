@@ -213,7 +213,7 @@ span{
     position: absolute;
     width: calc(100px + 1rem);
     height: 90%;
-    border-left: 3px solid black;
+    border-left: 1px solid black;
     right: -5;
     animation: cursor 0.6s infinite;
 }
@@ -230,10 +230,10 @@ padding-top: 100px;
 
 @keyframes words{
     0%, 20%{
-        content: "Web Developer";
+        content: "Python Developer";
     }
     21%, 41%{
-        content: "Python Developer";
+        content: "Web Developer";
     }
     41%, 60%{
         content: "Web Designer";
