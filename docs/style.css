@@ -211,16 +211,16 @@ span{
     content: "";
     background-color: rgb(255, 255, 255);
     position: absolute;
-    width: calc(3% + 120px);
-    height: 90%;
+    width: calc(100% + 1.5rem);
+    height: 100%;
     border-left: 3px solid rgb(255, 255, 255);
-    right: -8;
+    right: -1;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor{
     to{
-        border-left: 2.5px solid #3cc2e7;
+        border-left: 3px solid #3cc2e7;
     }
 }
 
@@ -229,7 +229,7 @@ span{
         content: "Web Developer";
     }
     21%, 40%{
-        content: "Python Developer";
+        content: "AHK Developer";
     }
     41%, 60%{
         content: "Web Designer";
@@ -238,7 +238,7 @@ span{
         content: "Youtuber";
     }
     81%, 100%{
-        content: "AHK Developer";
+        content: "Python Developer";
     }
 }
 
