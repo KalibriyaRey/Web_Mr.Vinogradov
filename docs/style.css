@@ -209,12 +209,8 @@ span{
 
 .typing-text span::after{
     content: "";
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    width: calc(-55px + 1rem);
-    height: 100%;
+    background-color: rgb(0, 0, 0);
     border-left: 3px solid rgb(0, 0, 0);
-    right: -7;
     animation: cursor 0.6s infinite;
 }
 
