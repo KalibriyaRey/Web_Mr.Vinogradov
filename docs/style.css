@@ -212,9 +212,9 @@ span{
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: calc(100px + 1rem);
-    height: 100%;
+    height: 95%;
     border-left: 3px solid rgb(0, 0, 0);
-    right: -1;
+    right: -7;
     animation: cursor 0.6s infinite;
 }
 
@@ -228,7 +228,7 @@ span{
     0%, 20%{
         content: "Web Developer";
     }
-    20%, 40%{
+    20%, 41%{
         content: "Python Developer";
     }
     40%, 60%{
