@@ -15,7 +15,7 @@ html{
 }
 
 body{
-    width: 100%;
+    width: 90%;
     height: 100vh;
     overflow-x: hidden;
     background-color: black;
@@ -267,5 +267,4 @@ span{
         margin-top: 4rem;
     }
 }
-
 
