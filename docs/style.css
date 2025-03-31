@@ -284,6 +284,8 @@ h1 {
 .pop-in:nth-child(7) { animation-delay: 1.4s; }
 .pop-in:nth-child(8) { animation-delay: 1.6s; }
 .pop-in:nth-child(9) { animation-delay: 1.8s; }
+.pop-in:nth-child(10) { animation-delay: 2.0s; }
+.pop-in:nth-child(11) { animation-delay: 2.2s; }
 
 .slide-up {
     opacity: 0;
