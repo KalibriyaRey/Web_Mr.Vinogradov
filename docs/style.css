@@ -18,8 +18,8 @@ body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background: radial-gradient(#2A3439, #1C2526); /* Радиальный градиент для тёмной темы */
-    color: #D3D3D3; /* Светло-серый текст */
+    background: radial-gradient(#2A3439, #1C2526);
+    color: #D3D3D3;
     position: relative;
 }
 
@@ -62,11 +62,12 @@ h1 {
 }
 
 .taplink-img img {
-    width: 20vw; /* Уменьшаем размер картинки с 25vw до 20vw */
+    width: 20vw;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     animation: float 4s ease-in-out infinite;
     transition: transform 0.3s ease;
+    object-fit: cover; /* Добавлено: сохраняем пропорции изображения */
 }
 
 .taplink-img img:hover {
@@ -98,7 +99,6 @@ h1 {
 }
 
 .taplink-content h3 {
-    
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -124,11 +124,11 @@ h1 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem; /* Увеличено с 4rem для удобства касания */
+    height: 5rem;
     background-color: transparent;
     border: 0.2rem solid #A9A9A9;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Увеличено с 2rem */
     border-radius: 50%;
     color: #A9A9A9;
     transition: 0.3s ease;
@@ -157,7 +157,7 @@ h1 {
 
 .btn {
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1.2rem 3.5rem; /* Увеличено с 1rem 3rem для удобства касания */
     background-color: #2F3A3B;
     border-radius: 3rem;
     font-size: 1.6rem;
@@ -218,7 +218,7 @@ h1 {
 }
 
 .service-card h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
@@ -359,7 +359,7 @@ h1 {
     }
 
     .taplink-img img {
-        width: 40vw; /* Уменьшаем размер картинки на мобильных устройствах с 50vw до 40vw */
+        width: 40vw;
         margin-top: 2rem;
     }
 
@@ -371,12 +371,40 @@ h1 {
         font-size: 2.5rem;
     }
 
-    .services-list, .skills-list {
-        flex-direction: column;
-        align-items: center;
+    .services-list {
+        justify-content: space-between; /* Равномерное распределение карточек */
     }
 
-    .service-card, .skill-card {
-        width: 80%;
+    .service-card {
+        width: calc(50% - 1.5rem); /* Две колонки с учётом gap */
+        margin-bottom: 3rem; /* Отступ снизу для читаемости */
+    }
+
+    .skills-list {
+        justify-content: space-between; /* Равномерное распределение карточек */
+    }
+
+    .skill-card {
+        width: calc(50% - 1rem); /* Две колонки с учётом gap */
+        margin-bottom: 2rem; /* Отступ снизу для читаемости */
+    }
+}
+
+
+
+
+/* Дополнительный медиа-запрос для совсем маленьких экранов */
+@media (max-width: 600px) {
+    .taplink-img img {
+        width: 50vw;
+        max-width: 150px;
+    }
+
+    .taplink-content h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem; /* Уменьшаем кнопки для маленьких экранов */
     }
 }

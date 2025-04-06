@@ -18,8 +18,10 @@ App.setup = function() {
     this.particles = [];
     this.lifespan = 1000;
     this.popPerBirth = 1;
-    this.maxPop = 300;
-    this.birthFreq = 2;
+    // Оптимизация: уменьшаем количество частиц на мобильных устройствах
+    this.maxPop = window.innerWidth <= 600 ? 150 : 300;
+    // Оптимизация: реже создаём частицы на мобильных устройствах
+    this.birthFreq = window.innerWidth <= 600 ? 5 : 2;
 
     // Build grid
     this.gridSize = 8;
@@ -171,7 +173,7 @@ App.move = function() {
 App.initDraw = function() {
     this.ctx.beginPath();
     this.ctx.rect(0, 0, this.width, this.height);
-    this.ctx.fillStyle = 'rgba(28, 37, 38, 0.8)'; // Тёмно-серый фон
+    this.ctx.fillStyle = 'rgba(28, 37, 38, 0.8)';
     this.ctx.fill();
     this.ctx.closePath();
 };
@@ -179,7 +181,7 @@ App.initDraw = function() {
 App.draw = function() {
     this.ctx.beginPath();
     this.ctx.rect(0, 0, this.width, this.height);
-    this.ctx.fillStyle = 'rgba(28, 37, 38, 0.1)'; // Прозрачное затемнение для следов
+    this.ctx.fillStyle = 'rgba(28, 37, 38, 0.1)';
     this.ctx.fill();
     this.ctx.closePath();
 
@@ -189,7 +191,7 @@ App.draw = function() {
         var h = p.hue + this.stepCount/30,
             s = p.sat,
             l = p.lum,
-            a = 0.7; // Уменьшенная прозрачность для мягкости
+            a = 0.7;
 
         var last = this.dataXYtoCanvasXY(p.xLast, p.yLast),
             now = this.dataXYtoCanvasXY(p.x, p.y);
@@ -230,6 +232,7 @@ App.dataXYtoCanvasXY = function(x, y) {
     return {x: xx, y: yy};
 };
 
+// Объединяем всё в один обработчик событий
 document.addEventListener('DOMContentLoaded', function() {
     App.setup();
     App.draw();
@@ -239,4 +242,9 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(frame);
     };
     frame();
+
+    // Добавляем обработку касаний для мобильных устройств
+    document.querySelectorAll('.btn, .social-icon').forEach(element => {
+        element.addEventListener('touchstart', () => element.click());
+    });
 });
